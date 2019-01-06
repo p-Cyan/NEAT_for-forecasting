@@ -1,0 +1,50 @@
+digraph finite_state_machine {
+	rankdir=BT size="8,5"
+	node [shape=circle]
+	subgraph cluster_input {
+		node [color=white style=filled]
+		color=lightgrey style=filled
+		1
+		2
+		3
+		4
+		5
+		6
+		7
+		label=input
+	}
+	subgraph cluster_output {
+		node [color=white style=filled]
+		color=lightgrey style=filled
+		8
+		label=output
+	}
+	1 -> 8 [label=1.04 style=dotted]
+	2 -> 8 [label=0.08]
+	3 -> 8 [label=0.97]
+	4 -> 8 [label=0.98]
+	5 -> 8 [label=0.43]
+	6 -> 8 [label=1.39]
+	7 -> 8 [label=1.17]
+	2 -> 11 [label=1.00]
+	11 -> 8 [label=-0.04 style=dotted]
+	11 -> 11 [label=-0.05]
+	7 -> 12 [label=1.00]
+	12 -> 8 [label=0.71 style=dotted]
+	12 -> 12 [label=0.83]
+	1 -> 13 [label=1.00]
+	13 -> 8 [label=1.12 style=dotted]
+	13 -> 13 [label=-1.64]
+	1 -> 16 [label=1.00]
+	16 -> 13 [label=1.00]
+	11 -> 17 [label=1.00]
+	17 -> 8 [label=-0.04]
+	13 -> 21 [label=1.87]
+	21 -> 8 [label=-0.99]
+	7 -> 22 [label=1.00]
+	22 -> 12 [label=1.00]
+	12 -> 23 [label=1.00]
+	23 -> 8 [label=0.71]
+	23 -> 23 [label=1.30]
+	21 -> 21 [label=-1.21]
+}
